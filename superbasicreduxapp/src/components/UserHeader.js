@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-
 import { fetchUser } from '../actions';
 
 class UserHeader extends Component {
@@ -10,7 +9,7 @@ class UserHeader extends Component {
   }
 
   render() {
-    const user = this.props.users.find(user => user.id ===  this.props.userId);
+    const { user } = this.props;
 
     if (!user) {
       return null;
@@ -20,8 +19,8 @@ class UserHeader extends Component {
   }
 }
 
-const mapPropsToState = (state) => {
-  return { users: state.users }
+const mapPropsToState = (state, ownProps) => {
+  return { user: state.users.find(user => user.id === ownProps.userId) };
 }
 
 export default connect(mapPropsToState, { fetchUser })(UserHeader);
