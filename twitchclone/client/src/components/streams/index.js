@@ -1,4 +1,4 @@
-export * from './StreamCreate';
+export { default as StreamCreate } from './StreamCreate';
 export * from './StreamDelete';
 export * from './StreamEdit';
 export * from './StreamList';
