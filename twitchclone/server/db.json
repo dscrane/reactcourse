@@ -1,0 +1,14 @@
+{
+  "streams": [
+    {
+      "title": "Best Stream",
+      "description": "Like the title says!",
+      "id": 1
+    },
+    {
+      "title": "Second Best Stream",
+      "description": "Wish it could be the best.....",
+      "id": 2
+    }
+  ]
+}
