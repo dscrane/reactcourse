@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux'
 
-import { fetchStream} from "../../redux/actions";
+import { fetchStream } from "../../redux/actions";
 
 class StreamShow extends Component {
   componentDidMount() {
@@ -9,9 +9,17 @@ class StreamShow extends Component {
   }
 
   render() {
+    if (!this.props.stream) {
+      return <div>Loading...</div>
+    }
+
+    const { title, description } = this.props.stream
     return (
       <div>
-        StreamList
+        <div className='content'>
+          <h3>{title}</h3>
+          <h5>{description}</h5>
+        </div>
       </div>
     )
   };
@@ -19,7 +27,7 @@ class StreamShow extends Component {
 
 const mapStateToProps = (state, ownProps) => {
    return {
-     streams: this.state.stream[ownProps.match.params.id]
+     stream: state.streams[ownProps.match.params.id]
    }
 }
 
