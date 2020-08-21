@@ -9,6 +9,12 @@
       "title": "Second Best Stream",
       "description": "Wish it could be the best.....",
       "id": 2
+    },
+    {
+      "title": "stream w id",
+      "description": "this one has an id",
+      "userId": "101263578302678898388",
+      "id": 3
     }
   ]
 }

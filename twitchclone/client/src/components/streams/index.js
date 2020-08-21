@@ -1,5 +1,5 @@
 export { default as StreamCreate } from './StreamCreate';
 export * from './StreamDelete';
 export * from './StreamEdit';
-export * from './StreamList';
+export { default as StreamList } from './StreamList';
 export * from './StreamShow';
